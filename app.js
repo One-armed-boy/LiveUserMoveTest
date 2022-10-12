@@ -9,8 +9,6 @@ const keyHash = {
 
 const clientSocket = io("http://127.0.0.1:3000");
 
-clientSocket.on("join");
-
 clientSocket.on("status", (data) => {
   const usersState = JSON.parse(data);
   $app.innerText = data;
